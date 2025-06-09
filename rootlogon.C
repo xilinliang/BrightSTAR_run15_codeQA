@@ -1,5 +1,8 @@
 // Filename: rootlogon.C
 // Description: Loading libBrStar automatically each time you start root.
+// Author: Latif Kabir < kabir@bnl.gov >
+// Created: Wed Nov 15 01:22:13 2017 (-0500)
+// URL: jlab.org/~latif
 {
     cout << "\n\t\t=======================================================" <<endl;
     cout << "\t\t|  Welcome to Bright-STAR Analysis Framework at RHIC  |"<<endl;
@@ -138,8 +141,12 @@
 
     cout << "\t\t  Attempting to load BrightSTAR libraries ... ";
     //------ Bright Star Maker Modules-------------
+    gSystem->Load("BrTemplateMaker");
+    gSystem->Load("BrEEmcMaker");
     gSystem->Load("BrRpMaker");
     gSystem->Load("BrFmsMaker");    
+    gSystem->Load("BrEmcMaker");    
+    gSystem->Load("BrPidMaker");    
     //gSystem->Load("BrPicoMaker");  //Need to load dependencies  
     gSystem->Load("BrFemtoMaker");    
     gSystem->Load("StFmsJetAnalysisMaker");    

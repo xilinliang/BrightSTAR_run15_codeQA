@@ -1,0 +1,13 @@
+#!/bin/csh
+
+hadd -f root_result/Run15FMSEastAna/Run15FMSXFCalc_RGAll.root root_result/Run15FMSEastAna/Run15FMSXFCalc_RG_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEp20All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEp20_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEp10All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEp10_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEm10All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEm10_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEm20All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_SmallBBCEm20_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEp20All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEp20_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEp10All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEp10_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEm10All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEm10_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEm20All.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_LargeBBCEm20_*
+hadd -f root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_ROFAll.root root_result/Run15FMSRGSys/Run15FMSXFCalc_RG_ROF_*
+

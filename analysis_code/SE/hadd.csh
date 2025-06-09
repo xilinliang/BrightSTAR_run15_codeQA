@@ -1,0 +1,18 @@
+#!/bin/csh
+
+hadd -f root_result/Run15FMSWestAna/Run15FMSXFCalc_AnaAll.root root_result/Run15FMSWestAna/Run15FMSXFCalc_Ana_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWp20All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWp20_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWp10All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWp10_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWm10All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWm10_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWm20All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_SmallBBCWm20_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWp20All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWp20_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWp10All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWp10_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWm10All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWm10_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWm20All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_LargeBBCWm20_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_Esumm10All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_Esumm10_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_Esumm5All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_Esumm5_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_Esump5All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_Esump5_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_Esump10All.root root_result/Run15FMSWestSys/Run15FMSXFCalc_Esump10_*
+hadd -f root_result/Run15FMSWestSys/Run15FMSXFCalc_ROFAll.root root_result/Run15FMSWestSys/Run15FMSXFCalc_ROF_*
+
+hadd -f root_result/Run15FMSEastAna_zerobias/Run15FMSXFCalc_AnaAll.root root_result/Run15FMSEastAna_zerobias/Run15FMSXFCalc_Ana_*

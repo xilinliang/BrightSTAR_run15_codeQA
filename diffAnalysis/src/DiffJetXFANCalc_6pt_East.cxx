@@ -217,7 +217,7 @@ void DiffJetXFANCalc_6pt_East(TString inFileName, TString outName, TString outNa
 		YellowANresultErr[j-StartBin] = YellowFit->GetParError(0) / polY;
 		YellowBeamRawAN[j]->Write();
 		//YellowSysErr[j-StartBin] = fabs(YellowANresult[j-StartBin] * sysY);
-		//outputtext<<"Y"<<"    "<<XFpoint[j-StartBin]<<"    "<<YellowANresult[j-StartBin]<<"    "<<YellowANresultErr[j-StartBin]<<endl;
+		outputtext<<"Y"<<"    "<<XFpoint[j-StartBin]<<"    "<<YellowANresult[j-StartBin]<<"    "<<YellowANresultErr[j-StartBin]<<endl;
 	}
 
 	//BlueBeamAN = new TGraphErrors((nXFusebinsStartBin) , XFpoint , ANresult , XFpointErr , ANresultErr);

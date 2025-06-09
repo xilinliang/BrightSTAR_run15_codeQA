@@ -1,2 +1,87 @@
-Run 15 diffractive EM-jet AN
+Run 15 diffractive EM-jet AN 
+Author: Xilin Liang 
+Email: xilin.liang@email.ucr.edu
 
+Here are the instruction to run the analysis.
+
+Special note 1: After you open a new terminal or re-login to the RCAS node, please run command: source setup.csh
+
+Special note 2: All the command for this analysis framework are required to run at this current folder! Do not run commands at any sub-directory!
+
+Part 1: set up the environment and compile the analysis code.
+
+ run the following command:
+
+ source setup.csh
+
+ ./onetime_setup.csh
+
+ make all
+
+Part 2(optional): generate the NanoDst , the analysis tree for this study
+
+  Convert MuDst to NanoDst and only keep the useful information for this study
+
+  Note: In this study, the NanoDst files are merged fill by fill. You will see 53 NanoDst files. If you want to reproduce any of the NanoDst file for the fill, it could be possible that there will be some minor difference due to the inaccessable of MuDst files in Distributed Disk (xrdroot)
+
+  Therefore, I will suggest you to use one MuDst file within the list of /star/data01/pwg/liangxl/BrightSTAR_run15/run15FMSfilelist/ to check
+
+      root4star
+
+      RunDiffJetTreeMaker_FMS("$MuDst", "$NanoDst", $fillNumber, "fms")
+
+Part 3: submit jobs to do the event delection and count the yields for each bin to prepare for calculating the A_N as well as the systematic uncertainty.
+
+  run the following command to submit jobs. Tips: we suggest to use different node to submit jobs with each of the commands below.
+
+  ./submit_job/SD_submit.csh
+
+  ./submit_job/RG_submit.csh
+
+  ./submit_job/SE_submit.csh
+
+  ./submit_job/generate_Inc_job.csh Inc
+
+Part 4: calculate the A_N and its systematic uncertainty
+
+  run the following command to merge the root files, calculate the A_N and its systematic uncertainty for single diffractive events, rapidity gap events and semi-exclusive events
+
+  ./analysis_code/hadd.csh
+
+  ./analysis_code/SD/all/analysis_SD_all.csh
+
+  ./analysis_code/SD/12np/analysis_SD_12np.csh
+
+  ./analysis_code/SD/3pnp/analysis_SD_3pnp.csh
+
+  ./analysis_code/RG/all/analysis_RG_all.csh
+
+  ./analysis_code/RG/12np/analysis_RG_12np.csh
+
+  ./analysis_code/RG/3pnp/analysis_RG_3pnp.csh
+
+  ./analysis_code/SE/analysis_SE.csh
+
+Part 5: draw the money plots
+
+   Fig 2: A_N for Rapidity Gap events
+
+       root -b -q analysis_code/PLBpaperplots/draw_AN_compare_diff_3mults_RG_combined.C
+
+   Fig 3: A_N for single diffractive process
+
+       root -b -q analysis_code/PLBpaperplots/draw_AN_compare_diff_3mults_SD_combined.C
+
+   Fig 4: Cross section fraction
+
+       root -b -q analysis_code/PLBpaperplots/Calc_cross_section.C
+
+   Fig 5: Comparison plot of A_N for inclusive, single diffractive, and rapidity gap events
+
+       root -b -q analysis_code/PLBpaperplots/draw_AN_compare_inc_SD_RG_combined_V2.C
+
+   Fig 6: A_N for semi-exclusive process
+
+       root -b -q analysis_code/PLBpaperplots/draw_12np_ANplot_5pointsW.C
+
+   After you run the code, you will find the figures in fig/PLBpaperplot/ folder
